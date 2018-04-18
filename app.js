@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 // Connect to mongodb database
 
 var mongoose = require('mongoose');
-var uri= "mongodb://localhost:27017/my-apm-database";
+var uri= "mongodb://localhost:27017/Products";
 mongoose.connect(uri);
 
 
@@ -25,7 +25,7 @@ var cors = require('cors');
 
 
 var app = express();
-app.use(cors()); // Encore pour activer CORS !!!
+app.use(cors()); // Encore pour activer CORS /activer cors pour tous (important de l'utiliser pour autoriser ressourse from remote access) 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
